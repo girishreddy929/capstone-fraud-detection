@@ -57,7 +57,7 @@ capstone-fraud-detection/
 
 ### **Task 2 – Rule-Based Reasoning**
 
-**Location:** `src/explanation/llm_narrative_openai.py`
+**Location:** `src/explanation/templates.py`
 
 * Applies deterministic fraud rules such as:
 
@@ -209,7 +209,7 @@ This will:
 
 | Output                  | Location                                   |
 | ----------------------- | ------------------------------------------ |
-| Final explained dataset | `data/processed/fraud_model_processed.csv` |
+| Final explained dataset | `data/final/fraud_explainability.csv` |
 | Visual reports          | `reports/`                                 |
 | SME feedback            | CSV/JSON (feedback system output)          |
 
