@@ -161,11 +161,14 @@ def generate_explanations_for_df_openai(df: pd.DataFrame, model: str = DEFAULT_M
         pd.DataFrame: DataFrame with a new 'explanation' column
     """
     df = df.copy()
-    # Apply the single-row explanation function to each row
-    df["explanation"] = df.apply(
-        lambda row: generate_explanation_openai(row, model=model),
-        axis=1
-    )
+
+    def safe_generate(row):
+        if int(row.get("fraud_prediction", 0)) != 1:
+            # Skip OpenAI call for non-fraud transactions
+            return "No fraud detected; explanation skipped."
+        return generate_explanation_openai(row, model=model)
+
+    df["explanation"] = df.apply(safe_generate, axis=1)
     return df
 
 # -----------------------------
