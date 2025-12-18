@@ -1,0 +1,9 @@
+pandas 
+pydantic 
+python-dotenv 
+openai 
+shap 
+scikit-learn 
+matplotlib 
+plotly 
+seaborn
