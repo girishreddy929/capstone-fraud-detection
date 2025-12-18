@@ -189,4 +189,3 @@ if __name__ == "__main__":
 
     # Print only transaction ID and explanation
     print(result_df)
-
