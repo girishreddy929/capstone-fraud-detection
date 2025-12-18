@@ -89,7 +89,7 @@ def plot_top_shap_features(df: pd.DataFrame):
 # -----------------------------
 # Main reporting function
 # -----------------------------
-def main(df: pd.DataFrame):
+def generate_reports(df: pd.DataFrame, shap_values=None):
     print("Generating reports...")
     plot_fraud_score_distribution(df)
     plot_fraud_prediction_counts(df)
@@ -107,4 +107,4 @@ if __name__ == "__main__":
         print(f"Processed CSV not found at {csv_path}. Please run final_explained_dataset.py first.")
     else:
         df_final = pd.read_csv(csv_path)
-        main(df_final)
+        generate_reports(df_final)
