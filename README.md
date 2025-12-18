@@ -25,14 +25,14 @@ capstone-fraud-detection/
 ├── data/
 │   ├── raw/                    # Input fraud model outputs
 │   └── processed/              # Final explained dataset
+│   └── final/                  # Final explained dataset w/ feedback
 │
 ├── reports/                    # Generated charts and visual reports
 │
 ├── src/
 │   ├── data_loader/            # Task 1: Load & validate data
 │   ├── explanation/            # Tasks 2–4: Rules, LLM, SHAP
-│   ├── data_process/           # Tasks 6–7: Reporting & feedback
-│   ├── final_dataset/          # Task 5: Final explained dataset
+│   ├── data_process/           # Tasks 5-6–7: Reporting & feedback
 │   └── final/                  # Orchestration (run all tasks)
 │
 ├── requirements.txt
